@@ -1,0 +1,57 @@
+.navbar{
+	
+	border-bottom:#469DAF 3px solid;
+	opacity: 0.9;
+	/*height: 6.8em;*/
+	background: #fff; 
+}
+.navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 20px; 
+}
+body {
+  margin-top: 105px; 
+}
+.color-overlay{
+	background-color: #4292AB;
+	opacity: 0.9;
+    position: absolute;
+    top: 6.8em;
+    left: 0;
+    width: 100%;
+    min-height: 10px;
+}
+.color-overlay .container .col-md-6 h2{
+	font-size: 5em;
+	padding-top: 1.5em;
+}
+.padd{
+	padding: 3em;
+}
+.padd .row .col input{
+	
+	height: 2.5em;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
+	border-right: none;
+}
+.card{
+	
+	height: 12em;
+	
+}
+#accordion a{
+	font-size: 1.5em;
+}
+.hover h3, .hover .p-3{
+	color:#3292A6;
+}
+.hover:hover, .hover h3:hover, .hover .p-3:hover{
+	background: #3292A6;
+	color: white;
+}
+.butt:hover{
+	background: #297889;
+	color: white;
+}
