@@ -7,8 +7,8 @@
 	<title>Mizuxe</title>
 	<link rel="stylesheet" href="css/font-awesome.css">
   	<link rel="stylesheet" href="css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	<script src="js/navbar-fixed.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script type="text/javascript">
 		new WOW().init();
@@ -28,10 +28,10 @@
 				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
 				<div class="collapse navbar-collapse justify-content-end" id="nav">
 					<ul class="navbar-nav ">
-						<li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="#meet">Meet The Authors</a></li>
-						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+						<li class="nav-item"><a class="nav-link scroll" href="#Home">Home</a></li>
+						<li class="nav-item "><a class="nav-link scroll" href="#about">About</a></li>
+						<li class="nav-item"><a class="nav-link scroll" href="#meet">Meet The Authors</a></li>
+						<li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -281,8 +281,23 @@
 
 		
 </body>
+
 <script src="js/jquery-3.1.1.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/popper.min.js"></script>
-<script ></script>
+<script>
+		$(".scroll").on("click", function(event){
+		if(this.hash !== ""){
+			event.preventDefault();
+			var hash=this.hash;
+			$("html, body").animate({
+				scrollTop:$(hash).offset().top
+			 },1000, function(){
+				window.location.hash=hash;
+				}
+			)
+		}
+	})
+</script>
 </html>
